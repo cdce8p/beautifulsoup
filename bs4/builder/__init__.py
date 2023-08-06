@@ -543,7 +543,8 @@ class DetectsXMLParsedAsHTML(object):
     def _warn(cls):
         """Issue a warning about XML being parsed as HTML."""
         warnings.warn(
-            XMLParsedAsHTMLWarning.MESSAGE, XMLParsedAsHTMLWarning
+            XMLParsedAsHTMLWarning.MESSAGE, XMLParsedAsHTMLWarning,
+            stacklevel=10
         )
         
     def _initialize_xml_detector(self):
